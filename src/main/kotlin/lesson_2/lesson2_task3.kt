@@ -1,7 +1,5 @@
 package org.example.lesson_2
 
-import kotlin.math.min
-
 fun main(){
     val year: Int=1961
     var hour: Short=9
