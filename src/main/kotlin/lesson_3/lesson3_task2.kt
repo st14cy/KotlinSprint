@@ -1,6 +1,6 @@
 package org.example.lesson_3
 
-fun main(){
+fun main() {
     val employeeCount = 50
     val employeeSalary = 30000
     val internCount = 30
