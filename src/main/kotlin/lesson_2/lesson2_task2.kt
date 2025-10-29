@@ -1,12 +1,16 @@
-package org.example.lesson_2
+package org.example.lesson_3
 
-fun main(){
-    var orderCount: Int=31
-    val thankMessage: String="Спасибо за покупку!"
-    println("Кол-во заказов" + orderCount +" " + thankMessage )
+fun main() {
+    val employeeCount = 50
+    val employeeSalary = 30000
+    val internCount = 30
+    val internSalary = 20000
 
-    var staffCount : Int =2000
-    //println(staffCount)
-    staffCount= 1999
-    println(staffCount)
+    val totalEmployeeExpense = employeeCount * employeeSalary
+    val totalSalaryExpense = totalEmployeeExpense + (internCount * internSalary)
+    val avgSalary = totalSalaryExpense / (employeeCount + internCount)
+
+    println(totalEmployeeExpense)
+    println(totalSalaryExpense)
+    println(avgSalary)
 }
