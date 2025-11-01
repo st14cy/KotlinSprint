@@ -1,14 +1,10 @@
 package org.example.lesson_2
 
-import kotlin.math.pow
-
-const val PROCENT = 100
-
 fun main() {
-    val sum = 70_000.0
-    val interestRate = 16.7
-    val year = 20
-    val finalValue = sum * (1 + interestRate / PROCENT).pow(year)
+    val seconds: Short = 6480
+    val totalHours = seconds / 60 / 60
+    val totalMinutes = seconds / 60 % 60
+    val totalSecond = seconds % 60
 
-    println("%.3f".format(finalValue))
+    println(String.format("%02d:%02d:%02d", totalHours, totalMinutes, totalSecond))
 }
