@@ -12,8 +12,6 @@ fun main() {
         }
     }
 
-    println("${lotteryNumbers.get(0)},${lotteryNumbers.get(1)},${lotteryNumbers.get(2)},")
-
     var countNum = 1
     while (personsNumbers.size < 3) {
         println("Введите ${countNum}e число: ");
