@@ -14,10 +14,11 @@ fun main() {
     println("Пароль: ")
     var userPassword = readln().trim()
 
-    if (userLogin != LOGIN && userPassword != PASSWORD) {
-        println("Необходима регистрация")
-        return;
-    } else {
-        println(SUCCESSFUL_AUTHO)
+    if (userLogin == LOGIN ) {
+        if(userPassword == PASSWORD){
+            println(SUCCESSFUL_AUTHO)
+            return
+        }
     }
+    println("Необходима регистрация")
 }
