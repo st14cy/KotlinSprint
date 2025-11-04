@@ -2,22 +2,26 @@ package org.example.lesson_5
 
 import kotlin.random.Random
 
+const val MIN_NUM=0
+const val MAX_NUM=42
+const val COUNT_CORRECT_NUM=3
+
 fun main() {
     val lotteryNumbers = mutableListOf<Int>();
     val personsNumbers = mutableListOf<Int>();
-    while (lotteryNumbers.size < 3) {
-        val num = Random.nextInt(0, 43)
+    while (lotteryNumbers.size < COUNT_CORRECT_NUM) {
+        val num = Random.nextInt(MIN_NUM, MAX_NUM+1)
         if (num !in lotteryNumbers) {
             lotteryNumbers.add(num)
         }
     }
 
     var countNum = 1
-    while (personsNumbers.size < 3) {
+    while (personsNumbers.size < COUNT_CORRECT_NUM) {
         println("Введите ${countNum}e число: ");
         var num = readln().trim().toInt()
-        if (num !in 0..42) {
-            println("Число должно быть в промежутке от 0 до 42");
+        if (num !in MIN_NUM..MAX_NUM) {
+            println("Число должно быть в промежутке от $MIN_NUM до $MAX_NUM");
             return
         }
         countNum++
