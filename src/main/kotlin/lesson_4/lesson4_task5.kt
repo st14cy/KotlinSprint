@@ -1,5 +1,9 @@
 package org.example.lesson_4
 
+const val MIN_PERSONS=55
+const val MAX_PERSONS=70
+const val PROVISION_BOX=50
+
 fun main() {
     println("Наличие повреждений корпуса(true/false)")
     var isDamage = readln().toBoolean()
@@ -10,6 +14,6 @@ fun main() {
     println("Благоприятность метеоусловий(true/false)")
     var weather = readln().toBoolean()
 
-    println("${(!isDamage && countPerson in 55..70 && countProvisionBox > 50) || (isDamage && countPerson == 70 && weather && countProvisionBox >= 50)}")
+    println("${(!isDamage && countPerson in MIN_PERSONS..MAX_PERSONS && countProvisionBox > PROVISION_BOX) || (isDamage && countPerson == MAX_PERSONS && weather && countProvisionBox >= PROVISION_BOX)}")
 
 }
